@@ -1,26 +1,21 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
+	"strconv"
 )
 
 func main() {
 	mux := http.NewServeMux()
-
-	aboutHandler := func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("About page"))
-	}
 
 	//Router
 
 	mux.HandleFunc("/", homeHandler)
 	mux.HandleFunc("/hello", helloHandler)
 	mux.HandleFunc("/mario", marioHandler)
-	mux.HandleFunc("/about", aboutHandler)
-	mux.HandleFunc("/profile", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Profile page"))
-	})
+	mux.HandleFunc("/product", productHandler)
 
 	log.Println("Starting web on port 5050")
 
@@ -43,4 +38,16 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 func marioHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Mario is Game nittendo"))
+}
+
+func productHandler(w http.ResponseWriter, r *http.Request) {
+	id := r.URL.Query().Get("id")
+	idNumb, err := strconv.Atoi(id)
+
+	if err != nil || idNumb < 1 {
+		http.NotFound(w, r)
+		return
+	}
+
+	fmt.Fprintf(w, "Product page : %d", idNumb)
 }

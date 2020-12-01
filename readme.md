@@ -3,4 +3,5 @@
 - [x] Perkenalan & Hello
 - [x] Routing Request
 - [x] Handler Function
-- [ ] Mengambil Query String
+- [x] Mengambil Query String
+- [ ] Membuat Package untuk Handler
