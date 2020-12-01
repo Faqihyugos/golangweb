@@ -4,4 +4,5 @@
 - [x] Routing Request
 - [x] Handler Function
 - [x] Mengambil Query String
-- [ ] Membuat Package untuk Handler
+- [x] Membuat Package untuk Handler
+- [ ] Menampilkan Halaman HTML
