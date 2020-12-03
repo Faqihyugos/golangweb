@@ -14,4 +14,4 @@
 - [x] Menggunakan Static File
 - [x] HTTP Get & Post
 - [x] Membuat HTML Form
-- [ ] Memproses data Form
+- [x] Memproses data Form
