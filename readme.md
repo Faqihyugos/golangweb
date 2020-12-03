@@ -7,4 +7,5 @@
 - [x] Membuat Package untuk Handler
 - [x] Menampilkan Halaman HTML
 - [x] Menampilkan Data Dinamis ke view html
-- [ ] Membuat Halaman Layout
+- [x] Membuat Halaman Layout
+- [ ] Menampilkan tipe data struct ke html

@@ -2,7 +2,6 @@ package handler
 
 import (
 	"html/template"
-	"fmt"
 	"log"
 	"net/http"
 	"path"
@@ -15,18 +14,18 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	
-	tmpl, err := template.ParseFiles(path.Join("views", "index.html"))
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Error is happening, keep calm", http.StatusInternalServerError)
-		return
-	}
 
 	// data
 	data := map[string]interface{}{
 		"title": "I'm Learning Go web",
 		"content": "I'm Learing Go Web with Agung Setiawan",
+	}
+	
+	tmpl, err := template.ParseFiles(path.Join("views", "index.html"), path.Join("views", "layout.html"))
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Error is happening, keep calm", http.StatusInternalServerError)
+		return
 	}
 
 	err = tmpl.Execute(w, data)
@@ -54,5 +53,22 @@ func ProductHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Fprintf(w, "Product page : %d", idNumb)
+	// fmt.Fprintf(w, "Product page : %d", idNumb)
+	data := map[string]interface{}{
+		"content" : idNumb,
+	}
+
+	tmpl, err := template.ParseFiles(path.Join("views", "product.html"),path.Join("views", "layout.html"))
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Error is happening, keep calm", http.StatusInternalServerError)
+		return
+	}
+
+	err = tmpl.Execute(w, data)
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Error is happening, keep calm", http.StatusInternalServerError)
+		return
+	}
 }
