@@ -8,4 +8,5 @@
 - [x] Menampilkan Halaman HTML
 - [x] Menampilkan Data Dinamis ke view html
 - [x] Membuat Halaman Layout
-- [ ] Menampilkan tipe data struct ke html
+- [x] Menampilkan tipe data struct ke html
+- [ ] Template/view Action
