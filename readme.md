@@ -12,4 +12,6 @@
 - [x] Template/view Action
 - [x] Template/view Function
 - [x] Menggunakan Static File
-- [ ] HTTP Get & Post
+- [x] HTTP Get & Post
+- [ ] Membuat HTML Form
+- [ ] Memproses data Form
