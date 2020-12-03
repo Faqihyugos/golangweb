@@ -6,4 +6,5 @@
 - [x] Mengambil Query String
 - [x] Membuat Package untuk Handler
 - [x] Menampilkan Halaman HTML
-- [ ] Menampilkan Data Dinamis ke view html
+- [x] Menampilkan Data Dinamis ke view html
+- [ ] Membuat Halaman Layout
