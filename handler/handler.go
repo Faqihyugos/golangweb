@@ -1,9 +1,11 @@
 package handler
 
 import (
+	"html/template"
 	"fmt"
 	"log"
 	"net/http"
+	"path"
 	"strconv"
 )
 
@@ -13,7 +15,20 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	w.Write([]byte("Welcome to home"))
+	
+	tmpl, err := template.ParseFiles(path.Join("views", "index.html"))
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Error is happening, keep calm", http.StatusInternalServerError)
+		return
+	}
+
+	err = tmpl.Execute(w, nil)
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Error is happening, keep calm", http.StatusInternalServerError)
+		return
+	}
 }
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {

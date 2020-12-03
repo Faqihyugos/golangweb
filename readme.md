@@ -5,4 +5,5 @@
 - [x] Handler Function
 - [x] Mengambil Query String
 - [x] Membuat Package untuk Handler
-- [ ] Menampilkan Halaman HTML
+- [x] Menampilkan Halaman HTML
+- [ ] Menampilkan Data Dinamis ke view html
