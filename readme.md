@@ -11,4 +11,5 @@
 - [x] Menampilkan tipe data struct ke html
 - [x] Template/view Action
 - [x] Template/view Function
-- [ ] Menggunakan Static File
+- [x] Menggunakan Static File
+- [ ] HTTP Get & Post
