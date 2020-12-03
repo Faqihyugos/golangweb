@@ -10,4 +10,5 @@
 - [x] Membuat Halaman Layout
 - [x] Menampilkan tipe data struct ke html
 - [x] Template/view Action
-- [ ] Template/view Function
+- [x] Template/view Function
+- [ ] Menggunakan Static File

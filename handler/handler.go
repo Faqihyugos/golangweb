@@ -24,9 +24,9 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 
 	// data := entity.Product{ID: 1, Name: "Mobilio", Price: 22000000, Stock: 4}
 	data := []entity.Product{
-		{ID: 1, Name: "Mobilio", Price: 22000000, Stock: 4},
+		{ID: 1, Name: "Mobilio", Price: 22000000, Stock: 11},
 		{ID: 2, Name: "Xpander", Price: 27000000, Stock: 2},
-		{ID: 3, Name: "Pajero Sport", Price: 30000000, Stock: 1},
+		{ID: 3, Name: "Pajero Sport", Price: 30000000, Stock: 8},
 	}
 	
 	tmpl, err := template.ParseFiles(path.Join("views", "index.html"), path.Join("views", "layout.html"))

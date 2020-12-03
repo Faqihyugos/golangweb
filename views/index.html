@@ -3,10 +3,7 @@
 
 {{ range .}}
     <div class="text">
-        {{ .Name}} - {{ .Price}}
-        {{ if lt .Stock 3}}
-            Stok Hampir habis
-        {{end}}
+        {{ .Name}} - {{ .Price}} - {{ .StockStatus}}
     </div>
 {{ end }}
 
